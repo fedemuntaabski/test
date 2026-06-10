@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://chp56y0i0a2wj"]
+
+[ext_resource type="Script" uid="uid://bbqvbkh1q8p0h" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
+[node name="MainMenu" type="Control" unique_id=2114976503]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="Background" type="ColorRect" parent="." unique_id=377116655]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.35, 0.42, 0.38, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=802705734]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=758875283]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=25480788]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+text = "Iniciar Partida"
+
+[node name="OptionsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1085459658]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+text = "Opciones"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1906076708]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+text = "Salir"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
