@@ -1,15 +1,14 @@
-[gd_scene format=3 uid="uid://dkn1fmhnciyae"]
+[gd_scene format=3 uid="uid://c7ytda4y2cgcq"]
 
-[ext_resource type="PackedScene" uid="uid://cgjj2bmatef67" path="res://scenes/Player.tscn" id="1_kqs1s"]
+[ext_resource type="PackedScene" uid="uid://cgjj2bmatef67" path="res://scenes/player.tscn" id="1_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://0jwh4c18yjbu" path="res://scenes/tile.tscn" id="2_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://qxg4y67f4e31" path="res://scenes/board.tscn" id="2_rwgxs"]
 
-[node name="World" type="Node2D" unique_id=1653388355]
+[node name="world" type="Node2D" unique_id=485538572]
 
-[node name="Ground" type="TileMap" parent="." unique_id=644170266]
-format = 2
+[node name="Player" parent="." unique_id=564587373 instance=ExtResource("1_rwgxs")]
 
-[node name="Props" type="Node2D" parent="." unique_id=181152420]
+[node name="Board" parent="." unique_id=982141879 instance=ExtResource("2_rwgxs")]
+tile_scene = ExtResource("2_4wyf3")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1186323634]
-color = Color(0.9, 0.9, 0.85, 1)
-
-[node name="Player" parent="." unique_id=419125074 instance=ExtResource("1_kqs1s")]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=901293910]
