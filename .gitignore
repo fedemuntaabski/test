@@ -1,0 +1,11 @@
+# Godot
+.godot/
+.import/
+# IDEs
+.vscode/
+.idea/
+# Sistema operativo
+.DS_Store
+Thumbs.db
+# Logs temporales
+*.log
