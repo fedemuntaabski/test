@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var tile_scene: PackedScene
-@export var tile_count := 7
+@export var tile_count := 0
 
 @onready var player = $"../Player"
 
@@ -12,7 +12,7 @@ var map_data : MapData
 
 func _ready():
 	map_data = MapGenerator.generate()
-
+	tile_count = map_data.tile_positions.size()
 	generate_board()
 	queue_redraw()
 	move_to_tile(0)
